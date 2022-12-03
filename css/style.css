@@ -1,0 +1,65 @@
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+.body #front{
+  vertical-align: middle;
+}
+h1{
+  text-align: center;
+  margin: 80px;
+}
+#front{
+  height: 300px;
+}
+
+#front label{
+  font-size: 20px;
+  margin-bottom: 10px;
+  
+}
+.number{
+width: 100px;
+height: 40px;
+font-size: 20px;
+text-align: center;
+}
+.body {
+    background-color: #F2F2F2;
+  }
+#title{
+    background-color: black;
+    padding: 5px;
+    padding-left: 50px;
+  }
+#title img{
+  height: 60px;
+
+}
+#front form .button{
+  width: 240px;
+  height: 60px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  background-color: #FF3000;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 22px;
+}
+#front h1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  font-size: 40px;
+}
+#front form{
+ text-align: center;
+}
+#front p{
+  font-size: 30px;
+}
+
+
