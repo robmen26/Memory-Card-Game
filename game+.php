@@ -36,10 +36,8 @@
     </iv>
 
 
-
-<script type="text/javascript" src="script.js">
-      
-
-</script>
+<script type="text/javascript" >let size= <?php echo $range?>; </script> <!-- a Deck méretét átadjuk a scriptnek --> 
+<script type="text/javascript" src="script/script.js"></script>
+<!-- a Deck méretét átadjuk a scriptnek -->
 </body>
 </html>
