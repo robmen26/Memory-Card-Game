@@ -11,11 +11,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body class="body">
-<div id="title" class="row fluid-container">
-    <div class="col">
+<div id="title" class="row fluid-container">   <!-- a title a legfelső sáv -->
+    <div class="col">                       
     <img src='img/evista.png' alt='card-img'>
 </div>
-    <form class ="col " method="post">
+    <form class ="col " method="post">  
         <label for="button">Deck Size</label>
         <select class="number" name="size" >
             <?php 
@@ -31,25 +31,25 @@
    </div>
 
     
-<div class="a  container">  
+<div class="a  container">   <!-- az "a" div a container ahol a kiirasok vannak(best,tries) -->
 
 <button class="restart "onclick="restart()">RESTART</button>
 <span id="tries"></span>
 <label id="best">BEST: 0 </label>
 
 </div>
-<div class="b container">
+<div class="b container">  <!-- az "b" divben maga a játék van -->
    
-<div class="wrapper ">
+<div class="wrapper ">  <!-- a kártyákat tartalmazó div -->
     <ul class="cards">
             <?php 
         if(isset($_POST["start"])){
-            $_SESSION["size"]=$_POST["size"]/2;
-             header("Location: game+.php");  
+            $_SESSION["size"]=$_POST["size"]/2; 
+             header("Location: game+.php");  //ujra tölti az oldalt a select által kiválasztott értékkel
                     }  
-                      
+
             $range=$_SESSION["size"];
-            for($j=0;$j<2;$j++){
+            for($j=0;$j<2;$j++){                // kártyák létrehozása
             for($i=1;$i<=$range;$i++){
              echo   "<li class='card'>
              <div class='view front-view'> 

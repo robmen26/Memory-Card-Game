@@ -1,18 +1,11 @@
 
+/* a game+.php  title*/
 .body{
   height:100vh;
     width:100vw;
+    overflow-x: hidden;
 }
-.b{
-  height: calc(100% - 200px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.a{
-  height: 100px;
 
-}
 .restart{
   width: 120px;
   height: 60px;
@@ -41,12 +34,12 @@
   padding: 10px;
   font-size: 22px;
 }
+/* a game+.php  "a" div rész beálltásai*/
 
-.a label{
-  position: relative;
-  left:30%;
-  top:20px;
-  font-size: 20px;
+
+.a{
+  height: 100px;
+
 }
 .a span{
   position: relative;
@@ -60,6 +53,13 @@
   font-size: 40px;
 }
 
+.b{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* a game+.php  "b" az a maga a játék beállításai*/
 .wrapper{
   height: 700px;
   width: 800px;
@@ -144,4 +144,82 @@
   transform: rotateY(0);
 }
 
+/* a game+.php  dmedia screen beállítások(responzivitás elősegítése)*/
 
+@media screen and (max-width: 1300px) {
+  .cards{
+    height: 600px;
+    width: 600px;
+  }
+
+  .a label{
+    position: relative;
+    left: 50px;
+    font-size: 20px;
+    }
+    .a span{
+      font-size: 20px;
+    }
+    .a button{
+      font-size: 20px;
+    }
+}
+@media screen and (max-width: 800px) {
+  .cards{
+    height: 500px;
+    width: 500px;
+  }
+  .card .front-view img{
+    width: 40px;
+  }
+  .card .back-view img{
+    max-width: 40px;
+
+  }
+  .a label{
+    position: relative;
+    left: -100px;
+    top:60px;
+    font-size: 20px;
+    }
+    .a span{
+      font-size: 20px;
+    }
+    .a button{
+      font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 530px) {
+  .cards{
+    height: 400px;
+    width: 400px;
+  }
+  
+  .card .front-view img{
+    width: 15px;
+  }
+  .card .back-view img{
+    max-width: 35px;
+  }
+  .a label{
+    position: relative;
+    left: -100px;
+    top:60px;
+    font-size: 20px;
+    }
+    .a span{
+      font-size: 20px;
+    }
+    .a button{
+      font-size: 20px;
+    }
+
+}
+
+@media screen and (min-height: 850px) {
+  .body{
+    overflow-y: hidden;
+  }
+
+}
