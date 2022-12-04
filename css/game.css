@@ -1,0 +1,76 @@
+
+.body{
+  height:100vh;
+    width:100vw;
+}
+.b{
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.wrapper{
+  height: 500px;
+  width: 500px;
+  padding: 25px;
+  border-radius: 10px;
+  background: #F8F8F8;
+
+}
+
+.cards, .card, .view{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cards{
+  height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cards .card{
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  height: calc(100% / 5 - 10px);
+  width: calc(100% / 4 - 10px);
+}
+
+.card .view{
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  border-radius: 7px;
+  background: #fff;
+  pointer-events: none;
+  backface-visibility: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.25s linear;
+}
+.card .back-view{
+  transform: rotateY(-180deg);
+}
+.card .back-view img{
+    max-width: 60px;
+}
+.card .front-view img{
+  max-width: 60px;
+
+}
+.card.flip .front-view {
+  transform: rotateY(180deg);
+}
+.card.flip .back-view {
+  transform: rotateY(0);
+}
+
+
