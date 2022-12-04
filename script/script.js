@@ -3,6 +3,8 @@ console.log(size);
 let matched = 0;
 let cardOne, cardTwo;
 let disableDeck = false;
+let tries=0;  // probálkozások száma
+let best=1000;
 
 function flipCard({target: clickedCard}) {// felhasználó kártyára kattint
     if(cardOne !== clickedCard && !disableDeck) {
@@ -18,12 +20,17 @@ function flipCard({target: clickedCard}) {// felhasználó kártyára kattint
     }
 }
 
-function matchCards(img1, img2) {// ha két kárty megegyezik
-    if(img1 === img2) {
+function matchCards(img1, img2) {
+    if(img1 === img2) {// ha két kárty megegyezik
         // ha a matched card eléri a size értékét akkor az összes párt megtalálták
         matched++;
+        tries++;
+        document.getElementById("tries").innerHTML ="Current Tries: "+tries;
         if(matched == size) {
-        
+            if(tries<best){
+            best = tries;
+            document.getElementById("best").innerHTML ="BEST: "+best;
+            }
             setTimeout(() => {
                 return shuffleCard();
             }, 1000);
@@ -32,8 +39,11 @@ function matchCards(img1, img2) {// ha két kárty megegyezik
         cardTwo.removeEventListener("click", flipCard);
         cardOne = cardTwo = "";// mindkét kártyát vissza alítjuk üres értékre
         return disableDeck = false;
+
     }
      // ha két kártya nem egyezik
+     tries++;
+     document.getElementById("tries").innerHTML ="Current Tries: "+tries;
     setTimeout(() => {
           // mind a kettő kártya kap shake class-t 400ms utás
         cardOne.classList.add("shake");
@@ -50,14 +60,16 @@ function matchCards(img1, img2) {// ha két kárty megegyezik
 }
 
 function shuffleCard() {
+    tries=0;  
+    document.getElementById("tries").innerHTML ="Current Triest: "+tries;     
     matched = 0;
     disableDeck = false;
     cardOne = cardTwo = "";
     let arr = [];
-    for(let i=1;i<=size;i++){
+    for(let i=1;i<=size;i++){               // a tömbe rakja 1- től size-ig a számokat(a kártyákat)
         arr[i-1]=i;
     }
-    for(let i=1;i<=size;i++){
+    for(let i=1;i<=size;i++){           // a tömbe végéhez rakja 1- size-ig a számokat(kártyák parjái)
         arr.push(i);
     } 
     arr.sort(() => Math.random() > 0.5 ? 1 : -1);
@@ -73,5 +85,10 @@ shuffleCard();
 cards.forEach(card => { // click eventet add hozzá a kártyákhoz
     card.addEventListener("click", flipCard);
 });
+
+function restart(){
+    shuffleCard();
+
+}
 
 

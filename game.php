@@ -15,7 +15,7 @@
 <div id="title" class="fluid-container">
     <img src='img/evista.png' alt='card-img'>
    </div>
-   <div id="start">
+  
 <h1 > Splendex Memory Game </h1>
     <div id="front" class="container d-flex align-items-center  justify-content-center">
         <form method="post">

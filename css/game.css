@@ -4,20 +4,67 @@
     width:100vw;
 }
 .b{
-  height: 80%;
+  height: calc(100% - 200px);
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.a{
+  height: 100px;
 
+}
+.restart{
+  width: 120px;
+  height: 60px;
+  background-color: #F2F2F2;
+  font-size: 22px;
+  cursor: pointer;
+  position: relative;
+  left:70%;
+  top:20px
+}
+#title form label{
+  color: gray;
+  margin-right: 10px;
+}
+#title form select{
+  height: 60px;
+  color: gray;
+}
+
+#title form .button{
+  width: 240px;
+  height: 60px;
+  background-color: #FF3000;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 22px;
+}
+
+.a label{
+  position: relative;
+  left:30%;
+  top:20px;
+  font-size: 20px;
+}
+.a span{
+  position: relative;
+  top:25px;
+  font-size: 40px;
+}
+.a label{
+  position: relative;
+  left: 150px;
+  top:25px;
+  font-size: 40px;
+}
 
 .wrapper{
-  height: 500px;
-  width: 500px;
+  height: 700px;
+  width: 800px;
   padding: 25px;
   border-radius: 10px;
-  background: #F8F8F8;
-
 }
 
 .cards, .card, .view{
@@ -39,8 +86,8 @@
   position: relative;
   perspective: 1000px;
   transform-style: preserve-3d;
-  height: calc(100% / 5 - 10px);
-  width: calc(100% / 4 - 10px);
+  height: calc(100% / 4 - 10px);
+  width: calc(100% / 5 - 10px);
 }
 
 .card .view{
@@ -56,11 +103,35 @@
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
   transition: transform 0.25s linear;
 }
+
+
+.card.shake{
+  animation: shake 0.35s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100%{
+    transform: translateX(0);
+  }
+  20%{
+    transform: translateX(-13px);
+  }
+  40%{
+    transform: translateX(13px);
+  }
+  60%{
+    transform: translateX(-8px);
+  }
+  80%{
+    transform: translateX(8px);
+  }
+}
+
 .card .back-view{
   transform: rotateY(-180deg);
 }
 .card .back-view img{
-    max-width: 60px;
+    max-width: 100px;
 }
 .card .front-view img{
   max-width: 60px;
