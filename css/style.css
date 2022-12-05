@@ -1,66 +1,62 @@
 /* az alapvető  beállítások az index.php és game.php */
 /* a number és title beálltásoka game+ ra is vonatkoznak */
-*{
+* {
   margin: 0px;
   padding: 0px;
 }
-.body #front{
+.body #front {
   vertical-align: middle;
 }
-h1{
+h1 {
   text-align: center;
   margin: 80px;
 }
-#front{
+#front {
   height: 300px;
 }
 
-#front label{
+#front label {
   font-size: 20px;
   margin-bottom: 10px;
-  
 }
-.number{
-width: 100px;
-height: 40px;
-font-size: 20px;
-text-align: center;
+.number {
+  width: 100px;
+  height: 40px;
+  font-size: 20px;
+  text-align: center;
 }
 .body {
-    background-color: #F2F2F2;
-  }
-#title{
-    background-color: black;
-    padding: 5px;
-    padding-left: 50px;
-  }
-#title img{
-  height: 60px;
-
+  background-color: #f2f2f2;
 }
-#front form .button{
+#title {
+  background-color: black;
+  padding: 5px;
+  padding-left: 50px;
+}
+#title img {
+  height: 60px;
+}
+#front form .button {
   width: 240px;
   height: 60px;
   margin-top: 40px;
   margin-bottom: 20px;
-  background-color: #FF3000;
+  background-color: #ff3000;
   color: white;
   border: none;
   padding: 10px;
   font-size: 22px;
 }
-#front h1{
+#front h1 {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 40px;
   font-size: 40px;
 }
-#front form{
- text-align: center;
+#front form {
+  text-align: center;
 }
-#front p{
+#front p {
   font-size: 30px;
 }
-
-
